@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <form id="home-form3">
+    <!-- <ion-item id="home-input7">
+      <ion-label>
+        Số lượng
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="home-input8">
+      <ion-label>
+        Chiết khấu
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item> -->
+
+    <!-- <div *ngFor="let message of messages">
+      <div *ngFor="let key of objectKeys(message)">
+          <div>KEY: {{ key }}</div>
+          <div *ngFor="let val of message[key]">{{ val.id }}</div>
+      </div>
+  </div> -->
+
+    <!-- <ion-item *ngFor="let name of names" >
+    <ion-label style="width:10px">{{name.Name}} with value {{name.Value}} </ion-label>
+    <button ion-button color="secondary"  (click)="remove(name)" >Remove</button>
+    <ion-item-options side="left">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+  </ion-item> -->
+
+    <!-- <ion-list > -->
+    <!-- <ion-item-sliding *ngFor="let name of names">
+        <ion-item>
+          <ion-label>
+            Số lượng
+          </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item style="position: relative;">
+          <ion-label>
+            Chiết khấu
+          </ion-label>
+          <ion-input type="text" placeholder="" type="number" maxlength="3"></ion-input>
+        </ion-item>
+        
+        <ion-item-options >
+          <button ion-button color="danger" (click)="delete(name)">Delete</button>
+        </ion-item-options>
+      </ion-item-sliding> -->
+    <!-- </ion-list> -->
+
+    <ion-item>
+      <ion-label>Employee</ion-label>
+      <ion-select>
+        <ion-option *ngFor="let employee of employees" (ionSelect)="onChange(employee)">{{employee}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <!-- <ion-list [virtualScroll]="employees">
+
+      <ion-item *virtualItem="let item">
+        {{ item.title }}
+      </ion-item>
+    
+    </ion-list> -->
+    <button ion-button (click)="openModal()">Open Modal</button>
+
+    <!-- <button ion-button color="secondary" (click)="add()">Add</button>
+    <button ion-button color="secondary" (click)="delete()">delete</button> -->
+
+  </form>
+</ion-content>

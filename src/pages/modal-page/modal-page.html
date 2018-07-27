@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ModalPage</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list [virtualScroll]="news">
+        <div tappable ion-item *virtualItem="let n" text-wrap (click)="openNews(n)">
+          <ion-row>
+            <!-- <ion-col width-20>
+              <img *ngIf="n.thumbnail" [src]="n.thumbnail">
+            </ion-col> -->
+            <ion-col width-80 text-wrap>
+              <!-- <h2>{{n.title}}</h2> -->
+              <p [innerHTML]="n.title"></p>
+              </ion-col>
+          </ion-row>
+        </div>
+      </ion-list>
+
+</ion-content>
